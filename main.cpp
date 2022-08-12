@@ -3,6 +3,7 @@
 #include <QProgressBar>
 #include <QSlider>
 #include <QBEInteger>
+#include<queuetest.h>
 #include<iostream>
 #include<window.h>
 using namespace std;
@@ -15,22 +16,23 @@ void testQBEInt(QBEInteger<int> *ptr) {
     }
 }
 
+
+
 int main(int argc, char **argv)
 {
     QApplication app (argc, argv);
 //    window *win = new window();
 //    win->show();
-    window win;
-    win.show();
-    int n = 10;
-    QBEInteger<int> *ptr = new QBEInteger<int>;
-    cout << ptr->operator%=(2) << endl;
-    testQBEInt(ptr);
-    cout << ptr->max() << endl;
-    cout << ptr->min() << endl;
-    cout << ptr->operator=(n) << endl;
-
-    cout << *ptr << endl;
+//    window win;
+//    win.show();
+//    int n = 10;
+//    QBEInteger<int> *ptr = new QBEInteger<int>;
+//    ptr->operator=(n);
+//    cout << ptr->operator%=(3) << endl;
+//    testQBEInt(ptr);
+    QueueTest qt = QueueTest(5);
+    qt.add();
+    qt.pull();
 
 
  return app.exec();

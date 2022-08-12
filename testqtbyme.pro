@@ -7,9 +7,10 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 SOURCES += \
     main.cpp \
-    qbtest.cpp \
+    queuetest.cpp \
     window.cpp
 
 HEADERS += \
     qbtest.h \
+    queuetest.h \
     window.h
